@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IT Item Request</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>IT Equipment Request Form</h2>
+      <form id="requestForm">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Employee Code</label>
+          <input type="text" name="employeeCode" placeholder="Enter employee code" required />
+        </div>
+
+        <div class="form-group">
+          <label>Designation</label>
+          <input type="text" name="designation" placeholder="Enter designation" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label>Department</label>
+          <select name="department" id="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="Unit Head Office">Unit Head Office</option>
+            <option value="Operation & Maintenance">Operation & Maintenance</option>
+            <option value="Operations, Chemistry">Operations, Chemistry</option>
+            <option value="Coal Quality Management">Coal Quality Management</option>
+            <option value="Boiler Maintenance">Boiler Maintenance</option>
+            <option value="Turbine & Auxiliaries">Turbine & Auxiliaries</option>
+            <option value="CHP, AHP, Bio Mass, Ash Management">CHP, AHP, Bio Mass, Ash Management</option>
+            <option value="Electrica">Electrical</option>
+            <option value="Control & Instrumentation">Control & Instrumentation</option>
+            <option value="Technical Services">Technical Services</option>
+            <option value="Coal Management Group">Coal Management Group</option>
+            <option value="Ash management">Ash management</option>
+            <option value="LAQ">LAQ</option>
+            <option value="Finance & Accounts">Finance & Accounts</option>
+            <option value="HR ES CSR Medical, Town Maint">HR ES CSR Medical, Town Maint</option>
+            <option value="Admin">Admin</option>
+            <option value="HR">HR</option>
+            <option value="Medical">Medical</option>
+            <option value="Corporate HR">Corporate HR</option>
+            <option value="CSR">CSR</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="MM&C">MM&C</option>
+            <option value="EHS">EHS</option>
+            <option value=" Solar, Mechanical Project, Civil, Plant Horticulture"> Solar, Mechanical Project, Civil, Plant Horticulture</option>
+            <option value="Electrical Project, TL">Electrical Project, TL</option>
+            <option value="Mines and CPP">Mines and CPP</option>
+            <option value="JIPT">JIPT</option>
+            <option value="IV/1">IV/1</option>
+            <option value="Sector 1 E">Sector 1 E</option>
+            <option value="IV/2-3">IV/2-3</option>
+            <option value="Security">Security</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>HOD Email</label>
+          <input type="email" name="hodEmail" id="hodEmail" placeholder="HOD email" readonly required />
+        </div>
+
+        <div class="form-group">
+          <label>Select Item</label>
+          <select name="item" required>
+            <option value="">-- Select Item --</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Desktop">Desktop</option>
+            <option value="ICM">ICM</option>
+            <option value="Printer">Printer</option>
+            <option value="Walkie-Talkie">Walkie-Talkie</option>
+            <option value="Mobile">Mobile</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Reason for Request</label>
+          <textarea name="reason" rows="4" placeholder="Describe your reason" required></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+        <div id="responseMessage"></div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
