@@ -1,3 +1,4 @@
+
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config({ path: './.env' });
@@ -11,12 +12,12 @@ app.use(express.json());
 
 connectDB();
 
-// Ye route yahi likho
-app.post('/submit-request', (req, res) => {
-    const { name, email, message } = req.body;
-    console.log('New request received:', name, email, message);
-
-    res.status(200).json({ message: 'Request submitted successfully!' });
-});
+const requestRoutes = require('./routes/requestRoutes');
+app.use('/api', requestRoutes);
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
+app.post('/submit-request', (req, res) => {
+    // request handle karo
+    res.json({ message: "Request received!" });
+  });
