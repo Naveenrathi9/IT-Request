@@ -59,7 +59,7 @@ document.getElementById('requestForm').addEventListener('submit', async function
   console.log('Sending to backend:', formData);
 
   try {
-    const res = await fetch('http://localhost:5000/api/request', {
+    const res = await fetch('https://api.render.com/deploy/srv-d01i6c3uibrs73ar7s00?key=YWzF1qzh7g0', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
