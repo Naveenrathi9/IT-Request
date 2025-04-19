@@ -1,4 +1,3 @@
-
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config({ path: './.env' });
@@ -12,7 +11,12 @@ app.use(express.json());
 
 connectDB();
 
-const requestRoutes = require('./routes/requestRoutes');
-app.use('/api', requestRoutes);
+// Ye route yahi likho
+app.post('/submit-request', (req, res) => {
+    const { name, email, message } = req.body;
+    console.log('New request received:', name, email, message);
+
+    res.status(200).json({ message: 'Request submitted successfully!' });
+});
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
