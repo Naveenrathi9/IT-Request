@@ -59,7 +59,7 @@ document.getElementById('requestForm').addEventListener('submit', async function
   console.log('Sending to backend:', formData);
 
   try {
-    const res = await fetch('https://api.render.com/deploy/srv-d01i6c3uibrs73ar7s00?key=YWzF1qzh7g0', {
+    const res = await fetch('https://it-request-system.onrender.com/submit-request', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
